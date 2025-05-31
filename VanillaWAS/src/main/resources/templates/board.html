@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2025-1 캡스톤</title>
+</head>
+<body>
+    <h1>테스트 게시판</h1>
+    <hr>
+    <a href="/"><button>HOME</button></a>
+    <h3>게시글 쓰기</h3>
+    <form action="/board" method="post">
+        작성자 이름: <br><input type="text" name="writer" required><br>
+        내용: <br><textarea name="content" rows="6" cols="50" required></textarea><br>
+        <input type="submit" value="등록">
+    </form>
+    <hr>
+    <h3>게시글 목록</h3>
+    <ul>
+    {{#each boards}}
+        <li>{{this}}</li>
+    {{/each}}
+    </ul>
+
+
+</body>
+</html>
