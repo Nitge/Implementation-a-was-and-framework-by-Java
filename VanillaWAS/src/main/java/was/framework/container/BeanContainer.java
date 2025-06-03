@@ -79,18 +79,6 @@ public class BeanContainer {
                 args[i] = beans.get(parameterTypes[i]);
             }
 
-//            for(Class<?> parameterType : parameterTypes) {
-//                if(!beans.containsKey(parameterType)) {
-//                    registerBean(methodMap.get(parameterType));
-//                }
-//
-//            }
-
-            // 파라미터에 해당하는 등록된 Bean들을 Map에서 가져옴
-//            Object[] args = Arrays.stream(parameterTypes)
-//                    .map(clazz -> beans.get(clazz))
-//                    .toArray();
-
             bean = method.invoke(config, args);
         }
 

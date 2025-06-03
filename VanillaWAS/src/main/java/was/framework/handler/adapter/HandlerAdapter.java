@@ -14,7 +14,9 @@ import static main.java.util.Logger.log;
 
 public class HandlerAdapter {
 
-    public ModelAndView handle(HttpRequest request, HttpResponse response, ControllerAndMethod controllerAndMethod) throws IOException {
+    public ModelAndView handle(HttpRequest request,
+                               HttpResponse response,
+                               ControllerAndMethod controllerAndMethod) throws IOException {
 
         ModelAndView mav = new ModelAndView();
         Model model = new Model();
